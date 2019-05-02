@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <h1>Welcome to the Party</h1>
+
+    <a href="/app/messages/new">Add a Message</a>
+
+    <h2>Messages: </h2>
+    <ul>
+        <% for(let i=0; i < allMessages.length; i++) { %>
+            <li>
+                <%= allMessages[i].messageText %>  - <%= allMessages[i].author[0].username %>
+            </li>
+        <% } %>
+    </ul>
+  </body>
+</html>
